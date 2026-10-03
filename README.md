@@ -6,35 +6,24 @@ Place <script_name>.jsx in the Illustrator Scripts folder: OS X: /Applications/A
 Windows (64 bit): C:\Program Files\Adobe\Adobe Illustrator [vers.] (64 Bit)\Presets\en_GB [or your localization]\Scripts\
 Restart Illustrator
 
-## **Move Selected Anchor By Angles**
-## Usage
+## Selection Grid Extender
 
-**Move Selected Anchor By Angle** is an Adobe Illustrator script that shifts a single anchor point sideways or vertically by a distance calculated from a line height and an angle.
+An Adobe Illustrator script (`Selection Grid Extender - compact UI.jsx`) that uses the selected object as a base square to generate a customizable grid[cite: 1].
 
-### How to run
+## How to use
 
-1. Open a document in Illustrator.
-2. Select the **Direct Selection tool (A)** and click exactly **one** anchor point.
-3. Go to **File > Scripts > Other Script…** and choose `Move_Selected_Anchor_By_Angle_DAYN.jsx`.
-4. In the dialog, enter:
-   - **Line height** (mm): the length of the line
-   - **Angle** (degrees): from 0 up to, but not including, 90
-   - **Direction**: Left, Right, Up, or Down
-5. Tick **Preview movement** to see the result live, then click **Apply**.
+1. Open an Adobe Illustrator document and select one or more objects[cite: 1].
+2. Run the script (`Selection Grid Extender - compact UI.jsx`)[cite: 1]. 
+3. Use the dialog window to set your desired **Columns**, **Rows**, and **Gutters**[cite: 1].
+4. To expand the grid beyond the object, add extra cells using the **Left**, **Right**, **Top**, and **Bottom** extension inputs[cite: 1].
+5. Toggle **Live Preview** to see how the grid looks on your canvas[cite: 1].
+6. Click **Apply** to generate the grid[cite: 1].
 
-### How it works
+## How it works
 
-The anchor moves by:
+* **The Base Square:** The script reads the physical bounds of your selected object(s) and uses that exact area as the foundational "base square"[cite: 1].
+* **Grid Math:** It divides the base square into the specified number of cells[cite: 1]. If you choose to "Extend outside," it simply repeats cells of that exact same size outward[cite: 1]. 
+* **Smart Rotation:** If you apply an angle, the script calculates a "tight fit" by measuring the selection's actual anchor points and bezier curves (tangent points)[cite: 1]. This ensures the rotated grid perfectly touches the outermost edges of your shape, even on rounded corners[cite: 1]. 
+* **Output:** The script draws the grid using standard paths on a brand new layer named `Selection Grid - [Timestamp]`[cite: 1]. You can choose to automatically convert these paths into Illustrator guides or lock the layer upon creation[cite: 1].
 
-`offset = line height × tan(angle)`
-
-The point's handles move with it, so the local curve shape is preserved. Cancel restores the original position.
-
-### Notes
-
-- Exactly one anchor point must be selected, otherwise the script shows a warning.
-- Default values are 50 mm and 5°.
-- Requires Adobe Illustrator with ExtendScript (.jsx) support.
-
-
-<img width="940" height="475" alt="image" src="https://github.com/user-attachments/assets/2a7c8135-d12f-4844-a569-9a4926e367d7" />
+* <img width="1917" height="1020" alt="image" src="https://github.com/user-attachments/assets/9b291460-c176-408d-b26c-2031840c6e89" />
