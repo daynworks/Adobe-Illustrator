@@ -8,12 +8,12 @@ Restart Illustrator
 
 ## Selection Grid Extender
 
-An Adobe Illustrator script (`Selection Grid Extender - compact UI.jsx`) that uses the selected object as a base square to generate a customizable grid[cite: 1].
+An Adobe Illustrator script (`Selection_Grid Maker & Extender_DAYN_v1.5.jsx`) that uses the selected object as a base square to generate a customizable grid[cite: 1].
 
 ## How to use
 
 1. Open an Adobe Illustrator document and select one or more objects[cite: 1].
-2. Run the script (`Selection Grid Extender - compact UI.jsx`)[cite: 1]. 
+2. Run the script (`Selection_Grid Maker & Extender_DAYN_v1.5.jsx`)[cite: 1]. 
 3. Use the dialog window to set your desired **Columns**, **Rows**, and **Gutters**[cite: 1].
 4. To expand the grid beyond the object, add extra cells using the **Left**, **Right**, **Top**, and **Bottom** extension inputs[cite: 1].
 5. Toggle **Live Preview** to see how the grid looks on your canvas[cite: 1].
